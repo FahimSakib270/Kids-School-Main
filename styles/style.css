@@ -7,3 +7,149 @@
   font-weight: 500;
   font-style: normal;
 }
+/* Shared-style */
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text-color-pri {
+  color: rgba(254, 163, 1, 1);
+}
+.text-color-sec {
+  color: rgba(1, 172, 253, 1);
+}
+
+/* header-style */
+.header {
+  margin: 20px 140px;
+}
+.nav-title {
+  color: rgba(17, 17, 17, 1);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.title {
+  gap: 11px;
+  display: flex;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  justify-content: flex-start;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links li a {
+  text-decoration: none;
+}
+.page-style-1 {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+.page-style-2 {
+  font-size: 1.25rem;
+}
+.page-style-3 {
+  font-size: 1.25rem;
+  color: #05d4df;
+}
+.page-style-4 {
+  font-size: 1.25rem;
+  color: #5d58ef;
+}
+.header-btn {
+  color: #ffffff;
+  background-color: rgba(254, 163, 1, 1);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 30px;
+  font-size: 1.25rem;
+}
+.separator {
+  display: none;
+}
+/* banner style */
+.banner-title {
+  font-size: 3.25rem;
+  font-weight: 700;
+}
+.banner {
+  gap: 50px;
+}
+.banner-description {
+  color: rgb(17, 17, 17);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.banner-btn {
+  border-radius: 12px;
+  background: rgb(17, 17, 17);
+  color: rgb(255, 255, 255);
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 10px 30px;
+}
+.banner-image {
+  width: 100%;
+}
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  margin-left: 20px;
+}
+.menu-toggle {
+  display: none;
+}
+/* responsive design */
+@media screen and (max-width: 576px) {
+  .header {
+    margin: 0;
+  }
+
+  .title {
+    padding-right: 140px;
+  }
+  .nav-bar {
+    position: relative;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .menu-toggle:checked + .hamburger + .pages .nav-links {
+    display: flex;
+  }
+  .banner {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: none;
+  }
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .separator {
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(254, 163, 1, 1);
+  }
+
+  .header-btn {
+    display: none;
+  }
+}
