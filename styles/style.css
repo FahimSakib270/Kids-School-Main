@@ -22,6 +22,9 @@
 .text-color-btn-3 {
   color: rgb(135, 0, 255);
 }
+.story-b {
+  text-align: center;
+}
 
 /* header-style */
 .header {
@@ -110,7 +113,12 @@
 main {
   background-image: url("../assets/bg.png");
   background-repeat: no-repeat;
-  background-size: cover; /* Scales the image to cover the entire container */
+  background-size: cover;
+  background: linear-gradient(
+    0deg,
+    rgba(254, 163, 1, 0.3),
+    rgba(255, 255, 255, 0.3) 100%
+  );
 }
 /* carriculum-title */
 .curriculum {
@@ -209,14 +217,166 @@ main {
 .curriculum-ball {
   width: 60px;
   height: 60px;
-  border-radius: 50%; /* Make it circular */
-  background-color: rgba(255, 144, 14, 1); /* Orange color */
+  border-radius: 50%;
+  background-color: rgba(255, 144, 14, 1);
+}
+/* story */
+.story {
+  margin: 0px 140px;
+}
+
+.story-title {
+  text-align: center;
+  font-size: 2.9rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.stories {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.part-1 {
+  position: relative;
+  border: none;
+  width: 540.27px;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+}
+
+.part-1 img {
+  width: 100%;
+  height: 337px;
+  border-radius: 16px;
+  background: rgb(255, 255, 255);
+}
+
+.part-1 button {
+  position: absolute;
+  top: 45%;
+  left: 26%;
+  transform: translate(-50%, -50%);
+  padding: 10px 15px;
+  background-color: rgba(1, 172, 253, 1);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.part-1 h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.part-1 p {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+.stories .story-content {
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.part-2 {
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+  position: relative;
+  border: none;
+  width: 540.27px;
+  height: 800px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.part-2 .story-2,
+.part-2 .story-3,
+.part-2 .story-4,
+.part-2 .story-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 290.69px;
+  height: 301.61px;
+}
+
+.part-2 .story-2 img,
+.part-2 .story-3 img,
+.part-2 .story-4 img,
+.part-2 .story-5 img {
+  width: 100%;
+  height: 177px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.part-2 h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+.part-2-btn1 {
+  position: absolute;
+  top: 26%;
+  left: -1%;
+  border-radius: 47.93px;
+  background: rgb(149, 178, 38);
+  border: none;
+  padding: 6px 12px;
+}
+.part-2-btn2 {
+  background-color: rgb(93, 88, 240);
+  border-radius: 47.93px;
+  position: absolute;
+  top: 26.5%;
+  left: 60%;
+  border: none;
+  padding: 6px 12px;
+}
+.part-2-btn3 {
+  background-color: rgb(149, 178, 38);
+  border-radius: 47.93px;
+  position: absolute;
+  bottom: 19%;
+  left: 4%;
+  border: none;
+  padding: 6px 12px;
+}
+.part-2-btn4 {
+  background-color: rgb(149, 178, 38);
+  border-radius: 47.93px;
+  position: absolute;
+  /* top: -26.5%; */
+  bottom: 19%;
+  left: 65%;
+  border: none;
+  padding: 6px 12px;
 }
 
 /* responsive design */
 @media screen and (max-width: 576px) {
   .header,
-  .curriculum {
+  .curriculum,
+  .part-2 {
     margin: 0;
   }
 
@@ -271,5 +431,74 @@ main {
   }
   .curriculum-balls {
     display: none;
+  }
+
+  .part-1 {
+    display: none;
+  }
+
+  .part-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    row-gap: 10px;
+  }
+
+  .part-2 .story-2,
+  .part-2 .story-3,
+  .part-2 .story-4,
+  .part-2 .story-5 {
+    width: 170px;
+    height: 250px;
+  }
+
+  .part-2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+  .story-title {
+    margin-bottom: 15px;
+    margin-left: none;
+    margin-right: none;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .part-2-btn4 {
+    background-color: rgb(149, 178, 38);
+    border-radius: 20px;
+    position: absolute;
+    /* top: -26.5%; */
+    bottom: 22%;
+    left: 58%;
+    border: none;
+    padding: 5px;
+  }
+  .part-2-btn3 {
+    background-color: rgb(149, 178, 38);
+    border-radius: 20px;
+    position: absolute;
+    /* top: -26.5%; */
+    bottom: 25%;
+    left: 5%;
+    border: none;
+    padding: 5px;
+  }
+  .part-2-btn2 {
+    background-color: rgb(93, 88, 240);
+    border-radius: 47.93px;
+    position: absolute;
+    top: 23%;
+    left: 55%;
+    border: none;
+    padding: 5px;
+  }
+  .part-2-btn1 {
+    position: absolute;
+    top: 24%;
+    left: 1%;
+    border-radius: 20px;
+    background: rgb(149, 178, 38);
+    border: none;
+    padding: 5px;
   }
 }
